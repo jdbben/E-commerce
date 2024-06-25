@@ -1,0 +1,116 @@
+.navbar{
+    padding: 0;
+    height: 15vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 1px 3px -2px black;
+}
+
+.navbar .nav-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 10rem;
+}
+
+.nav-logo p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.nav-menu{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-menu hr{
+    border: none;
+}
+
+
+.nav-menu li:hover{
+    position: relative;
+    animation: bigger 0.5s forwards;
+    cursor: pointer;
+}
+
+.nav-menu li:hover::after{
+    content: ""; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; 
+    height: 2px;
+    background: red; 
+    animation: fadeIn 1.5s;
+}
+
+@keyframes bigger{
+    0%{
+        font-size: 20px;
+    }
+    100%{
+        font-size: 25px;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.nav-login-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: absolute;
+    right: 10%;
+}
+
+.nav-login-cart button{
+    height: 50px;
+    width: 20vh;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+.nav-login-cart img{
+    cursor: pointer;
+}
+.nav-login-cart button:hover{
+    background-color: #ece9e9d3;
+}
+.nav-login-cart button:active{
+    background-color: #cfcbcb;
+
+}
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -40px;
+    border-radius: 11px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
+}
